@@ -68,7 +68,7 @@ const Footer = () => {
               <img 
                 src="/lovable-uploads/b18b4b03-0879-43dc-9052-0f7d7e1b568d.png" 
                 alt="Kambaa AI-First Implementation Partner" 
-                className="w-full max-w-md h-auto"
+                className="w-80 h-40 object-cover object-center rounded-lg"
               />
             </div>
           </div>
