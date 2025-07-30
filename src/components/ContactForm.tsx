@@ -56,10 +56,10 @@ const ContactForm = () => {
       <section id="contact-form" className="py-24 bg-gradient-hero">
         <div className="container mx-auto px-6">
           <div className="max-w-2xl mx-auto text-center">
-            <Card className="bg-gradient-card border-border shadow-neural">
+            <Card className="bg-gradient-to-br from-card to-secondary border-border shadow-lg shadow-primary/20">
               <CardContent className="p-12">
                 <div className="animate-fade-in-up">
-                  <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-6 shadow-glow">
+                  <div className="w-16 h-16 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-primary/50">
                     <svg className="w-8 h-8 text-primary-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
@@ -82,13 +82,13 @@ const ContactForm = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-12 animate-fade-in-up">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               Ready to Embrace the AI Future?
             </h2>
             <p className="text-xl text-muted-foreground">Let's Get Started.</p>
           </div>
 
-          <Card className="bg-gradient-card border-border shadow-neural">
+          <Card className="bg-gradient-to-br from-card to-secondary border-border shadow-lg shadow-primary/20">
             <CardHeader>
               <CardTitle className="text-2xl text-center text-foreground">
                 Schedule Your Free Consultation
@@ -167,7 +167,7 @@ const ContactForm = () => {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-gradient-primary hover:shadow-glow transition-all duration-500 text-lg py-6 rounded-xl font-semibold"
+                  className="w-full bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:shadow-primary/50 transition-all duration-500 text-lg py-6 rounded-xl font-semibold"
                 >
                   {isSubmitting ? "Submitting..." : "Submit and Schedule Free Consulting"}
                 </Button>

@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-4">
+            <h3 className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-4">
               Kambaa Inc.
             </h3>
             <p className="text-muted-foreground text-lg">
@@ -17,7 +17,7 @@ const Footer = () => {
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <div className="text-center">
               <div className="flex justify-center mb-4">
-                <div className="p-3 bg-gradient-primary rounded-full shadow-glow">
+                <div className="p-3 bg-gradient-to-r from-primary to-accent rounded-full shadow-lg shadow-primary/50">
                   <Globe className="w-6 h-6 text-primary-foreground" />
                 </div>
               </div>
@@ -32,7 +32,7 @@ const Footer = () => {
 
             <div className="text-center">
               <div className="flex justify-center mb-4">
-                <div className="p-3 bg-gradient-primary rounded-full shadow-glow">
+                <div className="p-3 bg-gradient-to-r from-primary to-accent rounded-full shadow-lg shadow-primary/50">
                   <Mail className="w-6 h-6 text-primary-foreground" />
                 </div>
               </div>
@@ -47,7 +47,7 @@ const Footer = () => {
 
             <div className="text-center">
               <div className="flex justify-center mb-4">
-                <div className="p-3 bg-gradient-primary rounded-full shadow-glow">
+                <div className="p-3 bg-gradient-to-r from-primary to-accent rounded-full shadow-lg shadow-primary/50">
                   <Phone className="w-6 h-6 text-primary-foreground" />
                 </div>
               </div>

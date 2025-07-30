@@ -25,7 +25,7 @@ const AILiteracy = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 animate-fade-in-up">
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-primary bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               AI Literacy Program
             </h2>
             <div className="text-lg md:text-xl text-foreground leading-relaxed max-w-5xl mx-auto space-y-6">
@@ -37,7 +37,7 @@ const AILiteracy = () => {
               </p>
               <p>
                 Our 16-hour program elevates your team's literacy to the top{" "}
-                <span className="bg-gradient-primary bg-clip-text text-transparent font-bold">95th percentile</span>, 
+                <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent font-bold">95th percentile</span>, 
                 empowering them with real AI mastery. For example, voice-to-text speeds work sixfold, finishing 
                 an 8-hour typing day in 1.5 hours; others draft emails, auto-respond, follow up sales, or schedule 
                 meetings remotely—revolutionizing workflows.
@@ -49,11 +49,11 @@ const AILiteracy = () => {
             {benefits.map((benefit, index) => (
               <Card 
                 key={index} 
-                className="bg-gradient-card border-border hover:shadow-neural transition-all duration-500 transform hover:scale-105 group"
+                className="bg-gradient-to-br from-card to-secondary border-border hover:shadow-lg hover:shadow-primary/20 transition-all duration-500 transform hover:scale-105 group"
               >
                 <CardContent className="p-8 text-center">
                   <div className="mb-6 flex justify-center">
-                    <div className="p-4 bg-gradient-primary rounded-full shadow-glow group-hover:animate-pulse">
+                    <div className="p-4 bg-gradient-to-r from-primary to-accent rounded-full shadow-lg shadow-primary/50 group-hover:animate-pulse">
                       <benefit.icon className="w-8 h-8 text-primary-foreground" />
                     </div>
                   </div>
