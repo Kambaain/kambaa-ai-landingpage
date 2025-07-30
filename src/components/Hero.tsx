@@ -56,7 +56,7 @@ const Hero = () => {
           <Button
             onClick={scrollToForm}
             size="lg"
-            className="bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:shadow-primary/50 transition-all duration-500 transform hover:scale-105 text-lg px-8 py-6 rounded-xl font-semibold"
+            className="bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:shadow-primary/50 transition-all duration-500 transform hover:scale-105 text-lg px-8 py-6 rounded-xl font-semibold shadow-2xl shadow-primary/30"
           >
             Get Your Free 1-on-1 Consulting
           </Button>
