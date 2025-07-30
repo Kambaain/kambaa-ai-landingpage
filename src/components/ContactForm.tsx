@@ -203,22 +203,6 @@ const ContactForm = () => {
                 />
               </div>
 
-              <div className="flex items-center space-x-2">
-                <Checkbox
-                  id="privacy"
-                  checked={formData.privacyAgreed}
-                  onCheckedChange={handlePrivacyChange}
-                />
-                <Label
-                  htmlFor="privacy"
-                  className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                >
-                  I agree to the{" "}
-                  <a href="#" className="text-primary hover:underline">
-                    privacy policy
-                  </a>
-                </Label>
-              </div>
 
               <Button
                 type="submit"
