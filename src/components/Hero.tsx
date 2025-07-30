@@ -48,7 +48,7 @@ const Hero = () => {
             Elevate Your Business with Kambaa's AI-First Approach
           </h1>
           
-          <p className="text-xl md:text-2xl text-muted-foreground mb-12 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-muted-foreground mb-12 leading-relaxed max-w-3xl mx-auto font-bold">
             Thank you for your partnership. We're excited to help you thrive in the AI era with 
             tailored consultation and team empowerment programs.
           </p>
