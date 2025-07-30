@@ -14,9 +14,9 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 mb-12 items-center">
+          <div className="grid lg:grid-cols-3 gap-12 mb-12 items-center">
             {/* Contact Information - Left Side */}
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="lg:col-span-1 grid md:grid-cols-3 lg:grid-cols-1 gap-8 lg:pl-8">
               <div className="text-center">
                 <div className="flex justify-center mb-3">
                   <div className="p-3 bg-gradient-to-r from-primary to-accent rounded-full shadow-lg shadow-primary/50">
@@ -64,7 +64,7 @@ const Footer = () => {
             </div>
 
             {/* Kambaa AI-First Partner Image - Right Side */}
-            <div className="flex justify-center lg:justify-end">
+            <div className="lg:col-span-2 flex justify-center lg:justify-end">
               <img 
                 src="/lovable-uploads/b18b4b03-0879-43dc-9052-0f7d7e1b568d.png" 
                 alt="Kambaa AI-First Implementation Partner" 
