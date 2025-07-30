@@ -18,45 +18,45 @@ const Footer = () => {
             {/* Contact Information - Left Side */}
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="flex justify-center mb-4">
-                  <div className="p-4 bg-gradient-to-r from-primary to-accent rounded-full shadow-lg shadow-primary/50">
-                    <Globe className="w-8 h-8 text-primary-foreground" />
+                <div className="flex justify-center mb-3">
+                  <div className="p-3 bg-gradient-to-r from-primary to-accent rounded-full shadow-lg shadow-primary/50">
+                    <Globe className="w-6 h-6 text-primary-foreground" />
                   </div>
                 </div>
-                <h4 className="font-semibold text-foreground mb-2 text-lg">Website</h4>
+                <h4 className="font-semibold text-foreground mb-2">Website</h4>
                 <a 
                   href="#" 
-                  className="text-primary hover:text-accent transition-colors text-lg"
+                  className="text-primary hover:text-accent transition-colors"
                 >
                   www.kambaa.com
                 </a>
               </div>
 
               <div className="text-center">
-                <div className="flex justify-center mb-4">
-                  <div className="p-4 bg-gradient-to-r from-primary to-accent rounded-full shadow-lg shadow-primary/50">
-                    <Mail className="w-8 h-8 text-primary-foreground" />
+                <div className="flex justify-center mb-3">
+                  <div className="p-3 bg-gradient-to-r from-primary to-accent rounded-full shadow-lg shadow-primary/50">
+                    <Mail className="w-6 h-6 text-primary-foreground" />
                   </div>
                 </div>
-                <h4 className="font-semibold text-foreground mb-2 text-lg">Contact</h4>
+                <h4 className="font-semibold text-foreground mb-2">Contact</h4>
                 <a 
                   href="mailto:hello@kambaa.com" 
-                  className="text-primary hover:text-accent transition-colors text-lg"
+                  className="text-primary hover:text-accent transition-colors"
                 >
                   hello@kambaa.com
                 </a>
               </div>
 
               <div className="text-center">
-                <div className="flex justify-center mb-4">
-                  <div className="p-4 bg-gradient-to-r from-primary to-accent rounded-full shadow-lg shadow-primary/50">
-                    <Phone className="w-8 h-8 text-primary-foreground" />
+                <div className="flex justify-center mb-3">
+                  <div className="p-3 bg-gradient-to-r from-primary to-accent rounded-full shadow-lg shadow-primary/50">
+                    <Phone className="w-6 h-6 text-primary-foreground" />
                   </div>
                 </div>
-                <h4 className="font-semibold text-foreground mb-2 text-lg">Phone</h4>
+                <h4 className="font-semibold text-foreground mb-2">Phone</h4>
                 <a 
                   href="tel:+1234567890" 
-                  className="text-primary hover:text-accent transition-colors text-lg"
+                  className="text-primary hover:text-accent transition-colors"
                 >
                   +1 (234) 567-8900
                 </a>
