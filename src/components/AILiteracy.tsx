@@ -6,7 +6,7 @@ const AILiteracy = () => {
     {
       icon: Clock,
       title: "Why Act Now",
-      description: "It hurts seeing great teams hesitate—don't miss this boost. Start now for instant innovation, higher morale, and a resilient edge that sparks passion and drive."
+      description: "It hurts seeing great teams hesitate don't miss this boost. Start now for instant innovation, higher morale, and a resilient edge that sparks passion and drive."
     },
     {
       icon: Users,
@@ -16,7 +16,7 @@ const AILiteracy = () => {
     {
       icon: Zap,
       title: "Benefits for You",
-      description: "See your team alive with confidence—they'll cut routine time, ignite creative joy, and position your firm as an AI pioneer, building a loyal, growth-driven culture."
+      description: "See your team alive with confidence they'll cut routine time, ignite creative joy, and position your firm as an AI pioneer, building a loyal, growth-driven culture."
     }
   ];
 
@@ -40,7 +40,7 @@ const AILiteracy = () => {
                 <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent font-bold">95th percentile</span>, 
                 empowering them with real AI mastery. For example, voice-to-text speeds work sixfold, finishing 
                 an 8-hour typing day in 1.5 hours; others draft emails, auto-respond, follow up sales, or schedule 
-                meetings remotely—revolutionizing workflows.
+                meetings remotely revolutionizing workflows.
               </p>
             </div>
           </div>
