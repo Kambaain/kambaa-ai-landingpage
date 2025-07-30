@@ -17,6 +17,13 @@ const Hero = () => {
         backgroundAttachment: 'fixed'
       }}
     >
+      {/* Logo in top left */}
+      <img 
+        src="/lovable-uploads/0b341369-00ee-45df-958c-4e9274953060.png" 
+        alt="Kambaa Logo" 
+        className="absolute top-8 left-8 h-16 w-auto z-20"
+      />
+      
       {/* Neural network overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 animate-pulse"></div>
       
