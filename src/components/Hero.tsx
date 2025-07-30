@@ -29,7 +29,7 @@ const Hero = () => {
         <div className="max-w-5xl mx-auto">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 text-white animate-fade-in">
             Unlock Your Business's{" "}
-            <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent animate-pulse">
+            <span className="text-purple-800">
               AI Potential
             </span>{" "}
             with Kambaa
