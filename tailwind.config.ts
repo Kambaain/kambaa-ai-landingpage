@@ -72,15 +72,7 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			backgroundImage: {
-				'gradient-primary': 'var(--gradient-primary)',
-				'gradient-hero': 'var(--gradient-hero)',
-				'gradient-card': 'var(--gradient-card)',
-				'gradient-neural': 'var(--gradient-neural)',
-			},
-			boxShadow: {
-				'glow': 'var(--shadow-glow)',
-				'neural': 'var(--shadow-neural)',
-				'card-ai': 'var(--shadow-card)',
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
 			},
 			keyframes: {
 				'accordion-down': {
@@ -125,13 +117,13 @@ export default {
 				},
 				'circuit-flow': {
 					'0%': { 
-						background-position: '0% 50%'
+						'background-position': '0% 50%'
 					},
 					'50%': { 
-						background-position: '100% 50%'
+						'background-position': '100% 50%'
 					},
 					'100%': { 
-						background-position: '0% 50%'
+						'background-position': '0% 50%'
 					}
 				}
 			},
