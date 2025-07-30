@@ -30,7 +30,7 @@ const AILiteracy = () => {
             </h2>
             <div className="text-lg md:text-xl text-foreground leading-relaxed max-w-5xl mx-auto space-y-6">
               <p>
-                We understand teams feeling unprepared in AI adoption—starting eager but stalling—and we're 
+                We understand teams feeling unprepared in AI adoption starting eager but stalling and we're 
                 here to close that gap with empathy and skill. Reports show{" "}
                 <span className="font-semibold text-primary">78% of enterprises use AI</span>, but only{" "}
                 <span className="font-semibold text-primary">2% tap its full power</span>, wasting huge potential.
