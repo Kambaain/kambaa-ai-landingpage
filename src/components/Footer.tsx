@@ -14,50 +14,62 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <div className="text-center">
-              <div className="flex justify-center mb-4">
-                <div className="p-3 bg-gradient-to-r from-primary to-accent rounded-full shadow-lg shadow-primary/50">
-                  <Globe className="w-6 h-6 text-primary-foreground" />
+          <div className="grid lg:grid-cols-2 gap-12 mb-12 items-center">
+            {/* Contact Information - Left Side */}
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="flex justify-center mb-4">
+                  <div className="p-4 bg-gradient-to-r from-primary to-accent rounded-full shadow-lg shadow-primary/50">
+                    <Globe className="w-8 h-8 text-primary-foreground" />
+                  </div>
                 </div>
+                <h4 className="font-semibold text-foreground mb-2 text-lg">Website</h4>
+                <a 
+                  href="#" 
+                  className="text-primary hover:text-accent transition-colors text-lg"
+                >
+                  www.kambaa.com
+                </a>
               </div>
-              <h4 className="font-semibold text-foreground mb-2">Website</h4>
-              <a 
-                href="#" 
-                className="text-primary hover:text-accent transition-colors"
-              >
-                www.kambaa.com
-              </a>
+
+              <div className="text-center">
+                <div className="flex justify-center mb-4">
+                  <div className="p-4 bg-gradient-to-r from-primary to-accent rounded-full shadow-lg shadow-primary/50">
+                    <Mail className="w-8 h-8 text-primary-foreground" />
+                  </div>
+                </div>
+                <h4 className="font-semibold text-foreground mb-2 text-lg">Contact</h4>
+                <a 
+                  href="mailto:hello@kambaa.com" 
+                  className="text-primary hover:text-accent transition-colors text-lg"
+                >
+                  hello@kambaa.com
+                </a>
+              </div>
+
+              <div className="text-center">
+                <div className="flex justify-center mb-4">
+                  <div className="p-4 bg-gradient-to-r from-primary to-accent rounded-full shadow-lg shadow-primary/50">
+                    <Phone className="w-8 h-8 text-primary-foreground" />
+                  </div>
+                </div>
+                <h4 className="font-semibold text-foreground mb-2 text-lg">Phone</h4>
+                <a 
+                  href="tel:+1234567890" 
+                  className="text-primary hover:text-accent transition-colors text-lg"
+                >
+                  +1 (234) 567-8900
+                </a>
+              </div>
             </div>
 
-            <div className="text-center">
-              <div className="flex justify-center mb-4">
-                <div className="p-3 bg-gradient-to-r from-primary to-accent rounded-full shadow-lg shadow-primary/50">
-                  <Mail className="w-6 h-6 text-primary-foreground" />
-                </div>
-              </div>
-              <h4 className="font-semibold text-foreground mb-2">Contact</h4>
-              <a 
-                href="mailto:hello@kambaa.com" 
-                className="text-primary hover:text-accent transition-colors"
-              >
-                hello@kambaa.com
-              </a>
-            </div>
-
-            <div className="text-center">
-              <div className="flex justify-center mb-4">
-                <div className="p-3 bg-gradient-to-r from-primary to-accent rounded-full shadow-lg shadow-primary/50">
-                  <Phone className="w-6 h-6 text-primary-foreground" />
-                </div>
-              </div>
-              <h4 className="font-semibold text-foreground mb-2">Phone</h4>
-              <a 
-                href="tel:+1234567890" 
-                className="text-primary hover:text-accent transition-colors"
-              >
-                +1 (234) 567-8900
-              </a>
+            {/* Kambaa AI-First Partner Image - Right Side */}
+            <div className="flex justify-center lg:justify-end">
+              <img 
+                src="/lovable-uploads/b18b4b03-0879-43dc-9052-0f7d7e1b568d.png" 
+                alt="Kambaa AI-First Implementation Partner" 
+                className="w-full max-w-md h-auto"
+              />
             </div>
           </div>
 
@@ -66,26 +78,19 @@ const Footer = () => {
               <p className="text-muted-foreground text-sm">
                 © 2024 Kambaa Inc. All rights reserved.
               </p>
-              <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
-                <div className="flex space-x-6">
-                  <a 
-                    href="#" 
-                    className="text-muted-foreground hover:text-primary transition-colors text-sm"
-                  >
-                    Privacy Policy
-                  </a>
-                  <a 
-                    href="#" 
-                    className="text-muted-foreground hover:text-primary transition-colors text-sm"
-                  >
-                    Terms of Service
-                  </a>
-                </div>
-                <img 
-                  src="/lovable-uploads/b18b4b03-0879-43dc-9052-0f7d7e1b568d.png" 
-                  alt="Kambaa AI-First Implementation Partner" 
-                  className="h-16 w-auto"
-                />
+              <div className="flex space-x-6">
+                <a 
+                  href="#" 
+                  className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                >
+                  Privacy Policy
+                </a>
+                <a 
+                  href="#" 
+                  className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                >
+                  Terms of Service
+                </a>
               </div>
             </div>
           </div>
