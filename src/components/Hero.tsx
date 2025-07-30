@@ -9,7 +9,7 @@ const Hero = () => {
 
   return (
     <section 
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-900 via-purple-900 to-slate-900"
       style={{
         backgroundImage: `linear-gradient(rgba(36, 37, 51, 0.8), rgba(36, 37, 51, 0.6)), url(${heroBackground})`,
         backgroundSize: 'cover',
@@ -18,14 +18,14 @@ const Hero = () => {
       }}
     >
       {/* Neural network overlay */}
-      <div className="absolute inset-0 bg-gradient-neural animate-neural-pulse"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 animate-pulse"></div>
       
       {/* Floating particles */}
       <div className="absolute inset-0">
         {[...Array(6)].map((_, i) => (
           <div
             key={i}
-            className="absolute w-2 h-2 bg-primary rounded-full animate-float opacity-60"
+            className="absolute w-2 h-2 bg-primary rounded-full animate-bounce opacity-60"
             style={{
               left: `${20 + i * 15}%`,
               top: `${30 + (i % 3) * 20}%`,
@@ -36,7 +36,7 @@ const Hero = () => {
       </div>
 
       <div className="container mx-auto px-6 text-center relative z-10">
-        <div className="max-w-4xl mx-auto animate-fade-in-up">
+        <div className="max-w-4xl mx-auto animate-pulse">
           <h1 className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent leading-tight">
             Elevate Your Business with Kambaa's AI-First Approach
           </h1>
