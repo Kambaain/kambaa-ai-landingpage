@@ -1,22 +1,22 @@
-import { Clock, Users, Zap } from "lucide-react";
+import { Lightbulb, Book, Rocket } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const AILiteracy = () => {
   const benefits = [
     {
-      icon: Clock,
+      icon: Lightbulb,
       title: "Why Act Now",
-      description: "It hurts seeing great teams hesitate don't miss this boost. Start now for instant innovation, higher morale, and a resilient edge that sparks passion and drive."
+      description: "It pains us to see talented teams sidelined by doubt—seize this moment to spark innovation, elevate spirits, and forge an unshakeable advantage that infuses your organization with energy and forward momentum."
     },
     {
-      icon: Users,
+      icon: Book,
       title: "How We Help",
-      description: "Engaging, expert sessions demystifying AI with hands-on skills for quick wins."
+      description: "Interactive, expert-facilitated sessions that simplify AI, delivering hands-on skills for instant, transformative impact."
     },
     {
-      icon: Zap,
+      icon: Rocket,
       title: "Benefits for You",
-      description: "See your team alive with confidence they'll cut routine time, ignite creative joy, and position your firm as an AI pioneer, building a loyal, growth-driven culture."
+      description: "Picture your team radiating assurance and ingenuity—they'll optimize AI to eliminate drudgery, unleash joyful breakthroughs, and crown your company as an AI trailblazer, cultivating a vibrant culture of loyalty and endless growth."
     }
   ];
 
@@ -26,21 +26,22 @@ const AILiteracy = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              AI Literacy Program
+              AI Literacy Program: Empower Your Team to Master AI
             </h2>
             <div className="text-lg md:text-xl text-foreground leading-relaxed max-w-5xl mx-auto space-y-6">
               <p>
-                We understand teams feeling unprepared in AI adoption starting eager but stalling and we're 
-                here to close that gap with empathy and skill. Reports show{" "}
-                <span className="font-semibold text-primary">78% of enterprises use AI</span>, but only{" "}
-                <span className="font-semibold text-primary">2% tap its full power</span>, wasting huge potential.
+                We empathize with teams eager to embrace AI but feeling overwhelmed by the learning curve—it's 
+                why we're passionate about equipping yours with confidence and expertise. While{" "}
+                <span className="font-semibold text-primary">78% of enterprises dip into AI</span>, just{" "}
+                <span className="font-semibold text-primary">2% unlock its true power</span>, squandering immense value.
               </p>
               <p>
-                Our 16-hour program elevates your team's literacy to the top{" "}
+                Our intensive 16-hour program catapults your team's literacy to the elite{" "}
                 <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent font-bold">95th percentile</span>, 
-                empowering them with real AI mastery. For example, voice-to-text speeds work sixfold, finishing 
-                an 8-hour typing day in 1.5 hours; others draft emails, auto-respond, follow up sales, or schedule 
-                meetings remotely revolutionizing workflows.
+                arming them with practical mastery. Imagine voice-to-text accelerating tasks six times faster, 
+                turning an 8-hour typing grind into 1.5 hours of productivity; or AI seamlessly drafting emails, 
+                auto-responding, sales follow-ups, and scheduling meetings on autopilot revolutionizing efficiency 
+                and freeing creativity.
               </p>
             </div>
           </div>
@@ -49,7 +50,8 @@ const AILiteracy = () => {
             {benefits.map((benefit, index) => (
               <Card 
                 key={index} 
-                className="bg-gradient-to-br from-card to-secondary border-border hover:shadow-lg hover:shadow-primary/20 transition-all duration-500 transform hover:scale-105 group"
+                className="bg-gradient-to-br from-card to-secondary border-border hover:shadow-lg hover:shadow-primary/20 transition-all duration-500 transform hover:scale-105 group animate-fade-in"
+                style={{ animationDelay: `${index * 200}ms` }}
               >
                 <CardContent className="p-8 text-center">
                   <div className="mb-6 flex justify-center">

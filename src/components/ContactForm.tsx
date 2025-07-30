@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
 
@@ -12,65 +11,116 @@ const ContactForm = () => {
     email: "",
     phone: "",
     company: "",
-    agreeToPolicy: false
+    privacyAgreed: false
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const { toast } = useToast();
 
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handlePrivacyChange = (checked: boolean) => {
+    setFormData(prev => ({
+      ...prev,
+      privacyAgreed: checked
+    }));
+  };
+
+  const validateForm = () => {
+    const { fullName, email, phone, company, privacyAgreed } = formData;
+    
+    if (!fullName.trim()) {
+      toast({
+        title: "Error",
+        description: "Full name is required",
+        variant: "destructive"
+      });
+      return false;
+    }
+    
+    if (!email.trim() || !/\S+@\S+\.\S+/.test(email)) {
+      toast({
+        title: "Error",
+        description: "Please enter a valid email address",
+        variant: "destructive"
+      });
+      return false;
+    }
+    
+    if (!phone.trim()) {
+      toast({
+        title: "Error",
+        description: "Phone number is required",
+        variant: "destructive"
+      });
+      return false;
+    }
+    
+    if (!company.trim()) {
+      toast({
+        title: "Error",
+        description: "Company name is required",
+        variant: "destructive"
+      });
+      return false;
+    }
+    
+    if (!privacyAgreed) {
+      toast({
+        title: "Error",
+        description: "Please agree to the privacy policy",
+        variant: "destructive"
+      });
+      return false;
+    }
+    
+    return true;
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!formData.agreeToPolicy) {
-      toast({
-        title: "Privacy Policy Required",
-        description: "Please agree to the privacy policy to continue.",
-        variant: "destructive",
-      });
-      return;
-    }
-
+    if (!validateForm()) return;
+    
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    
-    toast({
-      title: "Success!",
-      description: "Thank you! We'll reach out soon to kickstart your AI journey.",
-    });
-  };
-
-  const handleInputChange = (field: string, value: string | boolean) => {
-    setFormData(prev => ({
-      ...prev,
-      [field]: value
-    }));
+    try {
+      // Simulate form submission
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      setIsSubmitted(true);
+      toast({
+        title: "Success!",
+        description: "We're excited to connect and propel your AI success, expect our reach-out soon.",
+      });
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try again.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (isSubmitted) {
     return (
-      <section id="contact-form" className="py-24 bg-gradient-hero">
+      <section id="contact-form" className="py-24 bg-gradient-to-br from-primary/5 to-accent/5">
         <div className="container mx-auto px-6">
           <div className="max-w-2xl mx-auto text-center">
-            <Card className="bg-gradient-to-br from-card to-secondary border-border shadow-lg shadow-primary/20">
-              <CardContent className="p-12">
-                <div className="animate-fade-in-up">
-                  <div className="w-16 h-16 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-primary/50">
-                    <svg className="w-8 h-8 text-primary-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <h2 className="text-3xl font-bold mb-4 text-foreground">Thank You!</h2>
-                  <p className="text-xl text-muted-foreground">
-                    We'll reach out soon to kickstart your AI journey.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
+            <div className="bg-card p-8 rounded-lg shadow-lg border animate-fade-in">
+              <h2 className="text-3xl font-bold mb-4 text-foreground">Success!</h2>
+              <p className="text-lg text-muted-foreground">
+                We're excited to connect and propel your AI success, expect our reach-out soon.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -78,102 +128,107 @@ const ContactForm = () => {
   }
 
   return (
-    <section id="contact-form" className="py-24 bg-gradient-hero">
+    <section id="contact-form" className="py-24 bg-gradient-to-br from-primary/5 to-accent/5">
       <div className="container mx-auto px-6">
         <div className="max-w-2xl mx-auto">
-          <div className="text-center mb-12 animate-fade-in-up">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              Ready to Embrace the AI Future?
+          <div className="text-center mb-12 animate-fade-in">
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              Ready to Ignite Your AI Journey? Secure Your Spot Today.
             </h2>
-            <p className="text-xl text-muted-foreground">Let's Get Started.</p>
           </div>
 
-          <Card className="bg-gradient-to-br from-card to-secondary border-border shadow-lg shadow-primary/20">
-            <CardHeader>
-              <CardTitle className="text-2xl text-center text-foreground">
-                Schedule Your Free Consultation
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <Label htmlFor="fullName" className="text-foreground">Full Name *</Label>
-                    <Input
-                      id="fullName"
-                      type="text"
-                      required
-                      value={formData.fullName}
-                      onChange={(e) => handleInputChange("fullName", e.target.value)}
-                      className="bg-secondary border-border text-foreground"
-                      placeholder="Enter your full name"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="email" className="text-foreground">Email *</Label>
-                    <Input
-                      id="email"
-                      type="email"
-                      required
-                      value={formData.email}
-                      onChange={(e) => handleInputChange("email", e.target.value)}
-                      className="bg-secondary border-border text-foreground"
-                      placeholder="Enter your email"
-                    />
-                  </div>
-                </div>
+          <form onSubmit={handleSubmit} className="bg-card p-8 rounded-lg shadow-lg border animate-fade-in">
+            <div className="space-y-6">
+              <div>
+                <Label htmlFor="fullName" className="text-sm font-medium text-foreground">
+                  Full Name *
+                </Label>
+                <Input
+                  id="fullName"
+                  name="fullName"
+                  type="text"
+                  required
+                  value={formData.fullName}
+                  onChange={handleInputChange}
+                  className="mt-1"
+                  placeholder="Enter your full name"
+                />
+              </div>
 
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <Label htmlFor="phone" className="text-foreground">Phone Number *</Label>
-                    <Input
-                      id="phone"
-                      type="tel"
-                      required
-                      value={formData.phone}
-                      onChange={(e) => handleInputChange("phone", e.target.value)}
-                      className="bg-secondary border-border text-foreground"
-                      placeholder="Enter your phone number"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="company" className="text-foreground">Company Name *</Label>
-                    <Input
-                      id="company"
-                      type="text"
-                      required
-                      value={formData.company}
-                      onChange={(e) => handleInputChange("company", e.target.value)}
-                      className="bg-secondary border-border text-foreground"
-                      placeholder="Enter your company name"
-                    />
-                  </div>
-                </div>
+              <div>
+                <Label htmlFor="email" className="text-sm font-medium text-foreground">
+                  Email *
+                </Label>
+                <Input
+                  id="email"
+                  name="email"
+                  type="email"
+                  required
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  className="mt-1"
+                  placeholder="Enter your email address"
+                />
+              </div>
 
-                <div className="flex items-center space-x-2">
-                  <Checkbox
-                    id="agreeToPolicy"
-                    checked={formData.agreeToPolicy}
-                    onCheckedChange={(checked) => handleInputChange("agreeToPolicy", checked)}
-                  />
-                  <Label htmlFor="agreeToPolicy" className="text-sm text-muted-foreground">
-                    I agree to the{" "}
-                    <a href="#" className="text-primary hover:text-accent transition-colors underline">
-                      privacy policy
-                    </a>
-                  </Label>
-                </div>
+              <div>
+                <Label htmlFor="phone" className="text-sm font-medium text-foreground">
+                  Phone Number *
+                </Label>
+                <Input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  required
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                  className="mt-1"
+                  placeholder="Enter your phone number"
+                />
+              </div>
 
-                <Button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:shadow-primary/50 transition-all duration-500 text-lg py-6 rounded-xl font-semibold"
+              <div>
+                <Label htmlFor="company" className="text-sm font-medium text-foreground">
+                  Company Name *
+                </Label>
+                <Input
+                  id="company"
+                  name="company"
+                  type="text"
+                  required
+                  value={formData.company}
+                  onChange={handleInputChange}
+                  className="mt-1"
+                  placeholder="Enter your company name"
+                />
+              </div>
+
+              <div className="flex items-center space-x-2">
+                <Checkbox
+                  id="privacy"
+                  checked={formData.privacyAgreed}
+                  onCheckedChange={handlePrivacyChange}
+                />
+                <Label
+                  htmlFor="privacy"
+                  className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                 >
-                  {isSubmitting ? "Submitting..." : "Submit and Schedule Free Consulting"}
-                </Button>
-              </form>
-            </CardContent>
-          </Card>
+                  I agree to the{" "}
+                  <a href="#" className="text-primary hover:underline">
+                    privacy policy
+                  </a>
+                </Label>
+              </div>
+
+              <Button
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-primary-foreground font-semibold py-3 px-6 transition-all duration-300 transform hover:scale-105"
+              >
+                {isSubmitting ? "Submitting..." : "Submit & Unlock Free Consulting"}
+              </Button>
+            </div>
+          </form>
         </div>
       </div>
     </section>

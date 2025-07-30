@@ -1,21 +1,18 @@
 import { Button } from "@/components/ui/button";
-import heroBackground from "@/assets/ai-hero-background.jpg";
+import heroBackground from "@/assets/ai-business-hero.jpg";
 
 const Hero = () => {
   const scrollToForm = () => {
     const formSection = document.getElementById('contact-form');
-    formSection?.scrollIntoView({ behavior: 'smooth' });
+    if (formSection) {
+      formSection.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
     <section 
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-900 via-purple-900 to-slate-900"
-      style={{
-        backgroundImage: `linear-gradient(rgba(36, 37, 51, 0.8), rgba(36, 37, 51, 0.6)), url(${heroBackground})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed'
-      }}
+      className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: `url(${heroBackground})` }}
     >
       {/* Logo in top left */}
       <img 
@@ -24,50 +21,41 @@ const Hero = () => {
         className="absolute top-8 left-8 h-16 w-auto z-20"
       />
       
-      {/* Neural network overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 animate-pulse"></div>
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
       
-      {/* Floating particles */}
-      <div className="absolute inset-0">
-        {[...Array(6)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-2 h-2 bg-primary rounded-full animate-bounce opacity-60"
-            style={{
-              left: `${20 + i * 15}%`,
-              top: `${30 + (i % 3) * 20}%`,
-              animationDelay: `${i * 0.8}s`
-            }}
-          />
-        ))}
-      </div>
-
-      <div className="container mx-auto px-6 text-center relative z-10">
-        <div className="max-w-4xl mx-auto animate-pulse">
-          <h1 className="text-5xl md:text-7xl font-bold mb-8 text-white leading-tight">
-            Elevate Your Business with Kambaa's AI-First Approach
+      {/* Content */}
+      <div className="relative z-10 container mx-auto px-6 text-center">
+        <div className="max-w-5xl mx-auto">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 text-white animate-fade-in">
+            Unlock Your Business's{" "}
+            <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent animate-pulse">
+              AI Potential
+            </span>{" "}
+            with Kambaa
           </h1>
           
-          <p className="text-xl md:text-2xl text-muted-foreground mb-12 leading-relaxed max-w-3xl mx-auto font-bold">
-            Thank you for your partnership. We're excited to help you thrive in the AI era with 
-            tailored consultation and team empowerment programs.
+          <p className="text-xl md:text-2xl lg:text-3xl text-gray-200 mb-12 leading-relaxed animate-fade-in">
+            As your trusted partner, we're thrilled to guide you into the AI era—empowering your team, 
+            solving challenges, and driving explosive growth. Don't just adapt; lead the revolution.
           </p>
           
-          <Button
+          <Button 
             onClick={scrollToForm}
             size="lg"
-            className="bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:shadow-primary/50 transition-all duration-500 transform hover:scale-105 text-lg px-8 py-6 rounded-xl font-semibold shadow-2xl shadow-primary/30"
+            className="text-lg md:text-xl px-8 md:px-12 py-4 md:py-6 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white border-0 shadow-2xl shadow-blue-500/50 transition-all duration-300 transform hover:scale-105 animate-pulse"
           >
-            Get Your Free 1-on-1 Consulting
+            Claim Your Free 1-on-1 Consulting Session
           </Button>
         </div>
       </div>
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-primary rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-pulse"></div>
-        </div>
+      
+      {/* Floating elements animation */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 left-10 w-4 h-4 bg-blue-400/30 rounded-full animate-pulse"></div>
+        <div className="absolute top-40 right-20 w-6 h-6 bg-purple-400/30 rounded-full animate-pulse delay-1000"></div>
+        <div className="absolute bottom-32 left-1/4 w-3 h-3 bg-cyan-400/30 rounded-full animate-pulse delay-500"></div>
+        <div className="absolute bottom-20 right-1/3 w-5 h-5 bg-blue-400/30 rounded-full animate-pulse delay-1500"></div>
       </div>
     </section>
   );
