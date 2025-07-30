@@ -40,10 +40,10 @@ const Footer = () => {
                 </div>
                 <h4 className="font-semibold text-foreground mb-2">Contact</h4>
                 <a 
-                  href="mailto:hello@kambaa.com" 
+                  href="mailto:sowmya@kambaa.in" 
                   className="text-primary hover:text-accent transition-colors"
                 >
-                  hello@kambaa.com
+                  sowmya@kambaa.in
                 </a>
               </div>
 
