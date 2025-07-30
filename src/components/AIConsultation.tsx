@@ -6,7 +6,7 @@ const AIConsultation = () => {
     {
       icon: Zap,
       title: "Why Act Now",
-      description: "Envision the sting of competitors leaping ahead while you're held back—we share your drive to avoid that. The AI boom is exploding; hesitating means missing game-changing wins. Together, let's convert uncertainty into bold triumph."
+      description: "Envision the sting of competitors leaping ahead while you're held back we share your drive to avoid that. The AI boom is exploding; hesitating means missing game-changing wins. Together, let's convert uncertainty into bold triumph."
     },
     {
       icon: Settings,
@@ -16,7 +16,7 @@ const AIConsultation = () => {
     {
       icon: Star,
       title: "Benefits for You",
-      description: "Feel the exhilaration of leading a visionary enterprise—surging growth that motivates your team, unmatched efficiency for focused innovation, and revolutionary products that skyrocket revenue, build unbreakable loyalty, and craft a legacy of pride."
+      description: "Feel the exhilaration of leading a visionary enterprise surging growth that motivates your team, unmatched efficiency for focused innovation, and revolutionary products that skyrocket revenue, build unbreakable loyalty, and craft a legacy of pride."
     }
   ];
 
@@ -29,7 +29,7 @@ const AIConsultation = () => {
               AI Consultation: Strategic Guidance for Breakthrough Results
             </h2>
             <p className="text-lg md:text-xl text-foreground leading-relaxed max-w-5xl mx-auto">
-              Navigating AI's rapid rise can feel thrilling yet daunting—we've been there, and we're here to 
+              Navigating AI's rapid rise can feel thrilling yet daunting we've been there, and we're here to 
               shoulder the load with genuine partnership. As leading AI experts, we deliver customized strategies, 
               intelligent automation, AI agent development, and managed services that propel premier enterprises 
               like yours from everyday operations to industry dominance, fostering innovative products that 

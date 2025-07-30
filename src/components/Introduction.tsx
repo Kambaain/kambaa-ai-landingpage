@@ -6,7 +6,7 @@ const Introduction = () => {
           <p className="text-xl md:text-2xl text-foreground leading-relaxed animate-fade-in">
             The landscape has evolved beyond digital transformation. Now, intelligent systems, automation, 
             and generative AI are delivering measurable breakthroughs. We understand the excitement and 
-            challenges—let's partner to make AI your superpower, turning obstacles into opportunities for 
+            challenges let's partner to make AI your superpower, turning obstacles into opportunities for 
             lasting success.
           </p>
         </div>

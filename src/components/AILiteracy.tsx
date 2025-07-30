@@ -6,7 +6,7 @@ const AILiteracy = () => {
     {
       icon: Lightbulb,
       title: "Why Act Now",
-      description: "It pains us to see talented teams sidelined by doubt—seize this moment to spark innovation, elevate spirits, and forge an unshakeable advantage that infuses your organization with energy and forward momentum."
+      description: "It pains us to see talented teams sidelined by doubt seize this moment to spark innovation, elevate spirits, and forge an unshakeable advantage that infuses your organization with energy and forward momentum."
     },
     {
       icon: Book,
@@ -16,7 +16,7 @@ const AILiteracy = () => {
     {
       icon: Rocket,
       title: "Benefits for You",
-      description: "Picture your team radiating assurance and ingenuity—they'll optimize AI to eliminate drudgery, unleash joyful breakthroughs, and crown your company as an AI trailblazer, cultivating a vibrant culture of loyalty and endless growth."
+      description: "Picture your team radiating assurance and ingenuity they'll optimize AI to eliminate drudgery, unleash joyful breakthroughs, and crown your company as an AI trailblazer, cultivating a vibrant culture of loyalty and endless growth."
     }
   ];
 
@@ -30,7 +30,7 @@ const AILiteracy = () => {
             </h2>
             <div className="text-lg md:text-xl text-foreground leading-relaxed max-w-5xl mx-auto space-y-6">
               <p>
-                We empathize with teams eager to embrace AI but feeling overwhelmed by the learning curve—it's 
+                We empathize with teams eager to embrace AI but feeling overwhelmed by the learning curve it's 
                 why we're passionate about equipping yours with confidence and expertise. While{" "}
                 <span className="font-semibold text-primary">78% of enterprises dip into AI</span>, just{" "}
                 <span className="font-semibold text-primary">2% unlock its true power</span>, squandering immense value.

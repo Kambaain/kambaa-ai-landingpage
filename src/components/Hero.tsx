@@ -36,7 +36,7 @@ const Hero = () => {
           </h1>
           
           <p className="text-xl md:text-2xl lg:text-3xl text-gray-200 mb-12 leading-relaxed animate-fade-in">
-            As your trusted partner, we're thrilled to guide you into the AI era—empowering your team, 
+            As your trusted partner, we're thrilled to guide you into the AI era empowering your team, 
             solving challenges, and driving explosive growth. Don't just adapt; lead the revolution.
           </p>
           
