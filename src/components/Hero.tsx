@@ -37,11 +37,6 @@ const Hero = () => {
 
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="max-w-4xl mx-auto animate-pulse">
-          <img 
-            src="/lovable-uploads/fff946ef-5ea1-41ec-87d5-c50cdae1215a.png" 
-            alt="Kambaa Logo" 
-            className="mx-auto mb-8 h-32 w-auto"
-          />
           <h1 className="text-5xl md:text-7xl font-bold mb-8 text-white leading-tight">
             Elevate Your Business with Kambaa's AI-First Approach
           </h1>
