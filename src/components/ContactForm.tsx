@@ -133,7 +133,7 @@ const ContactForm = () => {
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-12 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              Claim your free 1 on1 Ai consultation
+              Claim your free 1 on1 AI consultation
             </h2>
           </div>
 
