@@ -66,19 +66,26 @@ const Footer = () => {
               <p className="text-muted-foreground text-sm">
                 © 2024 Kambaa Inc. All rights reserved.
               </p>
-              <div className="flex space-x-6">
-                <a 
-                  href="#" 
-                  className="text-muted-foreground hover:text-primary transition-colors text-sm"
-                >
-                  Privacy Policy
-                </a>
-                <a 
-                  href="#" 
-                  className="text-muted-foreground hover:text-primary transition-colors text-sm"
-                >
-                  Terms of Service
-                </a>
+              <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
+                <div className="flex space-x-6">
+                  <a 
+                    href="#" 
+                    className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                  >
+                    Privacy Policy
+                  </a>
+                  <a 
+                    href="#" 
+                    className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                  >
+                    Terms of Service
+                  </a>
+                </div>
+                <img 
+                  src="/lovable-uploads/b18b4b03-0879-43dc-9052-0f7d7e1b568d.png" 
+                  alt="Kambaa AI-First Implementation Partner" 
+                  className="h-16 w-auto"
+                />
               </div>
             </div>
           </div>
