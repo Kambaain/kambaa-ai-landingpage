@@ -1,5 +1,6 @@
 import { Clock, Users, Gift } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import classroomBg from "@/assets/classroom-background.jpg";
 
 const AIConsultation = () => {
   const features = [
@@ -21,8 +22,13 @@ const AIConsultation = () => {
   ];
 
   return (
-    <section className="py-24 bg-secondary/20">
-      <div className="container mx-auto px-6">
+    <section className="py-24 relative overflow-hidden">
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${classroomBg})` }}
+      />
+      <div className="absolute inset-0 bg-background/80" />
+      <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground">
