@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 
 const ContactForm = () => {
@@ -10,8 +11,11 @@ const ContactForm = () => {
     fullName: "",
     email: "",
     phone: "",
-    company: "",
-    privacyAgreed: false
+    collegeName: "",
+    yearSemester: "",
+    course: "",
+    specifyCourse: "",
+    isCurrentStudent: false
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -25,15 +29,22 @@ const ContactForm = () => {
     }));
   };
 
-  const handlePrivacyChange = (checked: boolean) => {
+  const handleSelectChange = (name: string, value: string) => {
     setFormData(prev => ({
       ...prev,
-      privacyAgreed: checked
+      [name]: value
+    }));
+  };
+
+  const handleStudentChange = (checked: boolean) => {
+    setFormData(prev => ({
+      ...prev,
+      isCurrentStudent: checked
     }));
   };
 
   const validateForm = () => {
-    const { fullName, email, phone, company, privacyAgreed } = formData;
+    const { fullName, email, phone, collegeName, yearSemester, course, specifyCourse, isCurrentStudent } = formData;
     
     if (!fullName.trim()) {
       toast({
@@ -62,19 +73,46 @@ const ContactForm = () => {
       return false;
     }
     
-    if (!company.trim()) {
+    if (!collegeName.trim()) {
       toast({
         title: "Error",
-        description: "Company name is required",
+        description: "College name is required",
+        variant: "destructive"
+      });
+      return false;
+    }
+
+    if (!yearSemester) {
+      toast({
+        title: "Error",
+        description: "Year/Semester is required",
+        variant: "destructive"
+      });
+      return false;
+    }
+
+    if (!course) {
+      toast({
+        title: "Error",
+        description: "Course is required",
+        variant: "destructive"
+      });
+      return false;
+    }
+
+    if (course === "Others" && !specifyCourse.trim()) {
+      toast({
+        title: "Error",
+        description: "Please specify your course",
         variant: "destructive"
       });
       return false;
     }
     
-    if (!privacyAgreed) {
+    if (!isCurrentStudent) {
       toast({
         title: "Error",
-        description: "Please agree to the privacy policy",
+        description: "Please confirm you are a current student",
         variant: "destructive"
       });
       return false;
@@ -97,7 +135,7 @@ const ContactForm = () => {
       setIsSubmitted(true);
       toast({
         title: "Success!",
-        description: "We're excited to connect and propel your AI success, expect our reach-out soon.",
+        description: "Thank you for registering! We're excited to see you at the AI Ignite Masterclass.",
       });
     } catch (error) {
       toast({
@@ -118,7 +156,7 @@ const ContactForm = () => {
             <div className="bg-card p-8 rounded-lg shadow-lg border animate-fade-in">
               <h2 className="text-3xl font-bold mb-4 text-foreground">Success!</h2>
               <p className="text-lg text-muted-foreground">
-                We're excited to connect and propel your AI success, expect our reach-out soon.
+                Thank you for registering! We're excited to see you at the AI Ignite Masterclass.
               </p>
             </div>
           </div>
@@ -132,13 +170,16 @@ const ContactForm = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-12 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(168,85,247,0.6)]">
-              Register Now
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              Secure Your Spot
             </h2>
+            <p className="text-lg text-muted-foreground">
+              Limited seats! Register before September 10, 2025!
+            </p>
           </div>
 
           <form onSubmit={handleSubmit} className="bg-card p-8 rounded-lg shadow-lg border animate-fade-in">
-            <div className="space-y-6">
+            <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <Label htmlFor="fullName" className="text-sm font-medium text-foreground">
                   Full Name *
@@ -167,7 +208,7 @@ const ContactForm = () => {
                   value={formData.email}
                   onChange={handleInputChange}
                   className="mt-1"
-                  placeholder="Enter your email address"
+                  placeholder="Use college email for priority"
                 />
               </div>
 
@@ -175,43 +216,122 @@ const ContactForm = () => {
                 <Label htmlFor="phone" className="text-sm font-medium text-foreground">
                   Phone Number *
                 </Label>
+                <div className="flex mt-1">
+                  <div className="bg-secondary px-3 py-2 rounded-l-md border border-r-0 border-input text-muted-foreground">
+                    +91
+                  </div>
+                  <Input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    required
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    className="rounded-l-none"
+                    placeholder="Enter phone number"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <Label htmlFor="collegeName" className="text-sm font-medium text-foreground">
+                  College Name *
+                </Label>
                 <Input
-                  id="phone"
-                  name="phone"
-                  type="tel"
+                  id="collegeName"
+                  name="collegeName"
+                  type="text"
                   required
-                  value={formData.phone}
+                  value={formData.collegeName}
                   onChange={handleInputChange}
                   className="mt-1"
-                  placeholder="Enter your phone number"
+                  placeholder="Enter your college name"
                 />
               </div>
 
               <div>
-                <Label htmlFor="company" className="text-sm font-medium text-foreground">
-                  Company Name *
+                <Label className="text-sm font-medium text-foreground">
+                  Year/Semester *
                 </Label>
-                <Input
-                  id="company"
-                  name="company"
-                  type="text"
-                  required
-                  value={formData.company}
-                  onChange={handleInputChange}
-                  className="mt-1"
-                  placeholder="Enter your company name"
-                />
+                <Select value={formData.yearSemester} onValueChange={(value) => handleSelectChange('yearSemester', value)}>
+                  <SelectTrigger className="mt-1 bg-background">
+                    <SelectValue placeholder="Select year/semester" />
+                  </SelectTrigger>
+                  <SelectContent className="bg-background border border-border z-50">
+                    <SelectItem value="1st-year">1st Year</SelectItem>
+                    <SelectItem value="2nd-year">2nd Year</SelectItem>
+                    <SelectItem value="3rd-year">3rd Year</SelectItem>
+                    <SelectItem value="4th-year">4th Year</SelectItem>
+                    <SelectItem value="1st-sem">1st Semester</SelectItem>
+                    <SelectItem value="2nd-sem">2nd Semester</SelectItem>
+                    <SelectItem value="3rd-sem">3rd Semester</SelectItem>
+                    <SelectItem value="4th-sem">4th Semester</SelectItem>
+                    <SelectItem value="5th-sem">5th Semester</SelectItem>
+                    <SelectItem value="6th-sem">6th Semester</SelectItem>
+                    <SelectItem value="7th-sem">7th Semester</SelectItem>
+                    <SelectItem value="8th-sem">8th Semester</SelectItem>
+                  </SelectContent>
+                </Select>
               </div>
 
-
-              <Button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-primary-foreground font-semibold py-3 px-6 transition-all duration-300 transform hover:scale-105"
-              >
-                {isSubmitting ? "Submitting..." : "Submit & Unlock Free Consulting"}
-              </Button>
+              <div>
+                <Label className="text-sm font-medium text-foreground">
+                  Course *
+                </Label>
+                <Select value={formData.course} onValueChange={(value) => handleSelectChange('course', value)}>
+                  <SelectTrigger className="mt-1 bg-background">
+                    <SelectValue placeholder="Select your course" />
+                  </SelectTrigger>
+                  <SelectContent className="bg-background border border-border z-50">
+                    <SelectItem value="Engineering">Engineering</SelectItem>
+                    <SelectItem value="Computer Science">Computer Science</SelectItem>
+                    <SelectItem value="Information Technology">Information Technology</SelectItem>
+                    <SelectItem value="Business">Business</SelectItem>
+                    <SelectItem value="Data Science">Data Science</SelectItem>
+                    <SelectItem value="AI/ML">AI/ML</SelectItem>
+                    <SelectItem value="Others">Others</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
             </div>
+
+            {formData.course === "Others" && (
+              <div className="mt-6">
+                <Label htmlFor="specifyCourse" className="text-sm font-medium text-foreground">
+                  Specify Course *
+                </Label>
+                <Input
+                  id="specifyCourse"
+                  name="specifyCourse"
+                  type="text"
+                  required
+                  value={formData.specifyCourse}
+                  onChange={handleInputChange}
+                  className="mt-1"
+                  placeholder="Enter your course details"
+                />
+              </div>
+            )}
+
+            <div className="mt-6 flex items-start space-x-2">
+              <Checkbox
+                id="isCurrentStudent"
+                checked={formData.isCurrentStudent}
+                onCheckedChange={handleStudentChange}
+                className="mt-1"
+              />
+              <Label htmlFor="isCurrentStudent" className="text-sm text-foreground">
+                I confirm I am a current student *
+              </Label>
+            </div>
+
+            <Button
+              type="submit"
+              disabled={isSubmitting}
+              className="w-full mt-6 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-primary-foreground font-semibold py-3 px-6 transition-all duration-300"
+            >
+              {isSubmitting ? "Registering..." : "Register for Free"}
+            </Button>
           </form>
         </div>
       </div>
