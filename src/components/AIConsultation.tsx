@@ -1,22 +1,22 @@
-import { Zap, Settings, Star } from "lucide-react";
+import { Clock, Users, Gift } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const AIConsultation = () => {
-  const benefits = [
+  const features = [
     {
-      icon: Zap,
-      title: "Why Act Now",
-      description: "Envision the sting of competitors leaping ahead while you're held back we share your drive to avoid that. The AI boom is exploding; hesitating means missing game-changing wins. Together, let's convert uncertainty into bold triumph."
+      icon: Clock,
+      title: "4 Hours",
+      description: "Comprehensive session"
     },
     {
-      icon: Settings,
-      title: "How We Help",
-      description: "Precision AI integration for quantifiable leaps forward, perfectly tailored to your unique vision and goals."
+      icon: Users,
+      title: "Expert Led",
+      description: "Industry professionals"
     },
     {
-      icon: Star,
-      title: "Benefits for You",
-      description: "Feel the exhilaration of leading a visionary enterprise surging growth that motivates your team, unmatched efficiency for focused innovation, and revolutionary products that skyrocket revenue, build unbreakable loyalty, and craft a legacy of pride."
+      icon: Gift,
+      title: "Completely Free",
+      description: "Worth ₹1999"
     }
   ];
 
@@ -25,36 +25,35 @@ const AIConsultation = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              AI Consultation: Strategic Guidance for Breakthrough Results
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground">
+              What is the AI Ignite Masterclass?
             </h2>
-            <p className="text-lg md:text-xl text-foreground leading-relaxed max-w-5xl mx-auto">
-              Navigating AI's rapid rise can feel thrilling yet daunting we've been there, and we're here to 
-              shoulder the load with genuine partnership. As leading AI experts, we deliver customized strategies, 
-              intelligent automation, AI agent development, and managed services that propel premier enterprises 
-              like yours from everyday operations to industry dominance, fostering innovative products that 
-              captivate and conquer markets.
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-4xl mx-auto">
+              This free masterclass, brought to you by <span className="text-blue-600 font-semibold">Kambaa AI</span>, is designed for students like you who are new to AI. 
+              Whether you've never heard of artificial intelligence or only know the basics, this 4 hour session will open your 
+              eyes to a world of opportunity. Hosted by industry experts, it's your first step toward becoming an AI innovator, 
+              <span className="font-semibold"> no experience required!</span>
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            {features.map((feature, index) => (
               <Card 
                 key={index} 
-                className="bg-gradient-to-br from-card to-secondary border-border hover:shadow-lg hover:shadow-primary/20 transition-all duration-500 transform hover:scale-105 group animate-fade-in"
+                className="bg-background border-border hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 group animate-fade-in"
                 style={{ animationDelay: `${index * 200}ms` }}
               >
                 <CardContent className="p-8 text-center">
                   <div className="mb-6 flex justify-center">
-                    <div className="p-4 bg-gradient-to-r from-primary to-accent rounded-full shadow-lg shadow-primary/50 group-hover:animate-pulse">
-                      <benefit.icon className="w-8 h-8 text-primary-foreground" />
+                    <div className="p-4 bg-blue-100 rounded-full">
+                      <feature.icon className="w-8 h-8 text-blue-600" />
                     </div>
                   </div>
-                  <h3 className="text-xl font-semibold mb-4 text-foreground">
-                    {benefit.title}
+                  <h3 className="text-xl font-semibold mb-2 text-foreground">
+                    {feature.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {benefit.description}
+                  <p className="text-muted-foreground">
+                    {feature.description}
                   </p>
                 </CardContent>
               </Card>
