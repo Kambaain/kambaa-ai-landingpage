@@ -10,10 +10,19 @@ const Hero = () => {
   };
 
   return (
-    <section 
-      className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: `url(${heroBackground})` }}
-    >
+    <>
+      {/* Top promotional banner */}
+      <div className="bg-gradient-to-r from-red-600 to-red-500 text-white text-center py-3 shadow-lg shadow-red-500/50 relative overflow-hidden">
+        <div className="absolute inset-0 bg-red-500/20 animate-pulse"></div>
+        <p className="relative z-10 text-sm md:text-base font-semibold flex items-center justify-center gap-2">
+          🎁 Worth ₹1999 - Absolutely FREE!
+        </p>
+      </div>
+      
+      <section 
+        className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${heroBackground})` }}
+      >
       {/* Logo in top left */}
       <img 
         src="/lovable-uploads/0b341369-00ee-45df-958c-4e9274953060.png" 
@@ -55,6 +64,7 @@ const Hero = () => {
         <div className="absolute bottom-20 right-1/3 w-5 h-5 bg-blue-400/30 rounded-full animate-pulse delay-1500"></div>
       </div>
     </section>
+    </>
   );
 };
 
