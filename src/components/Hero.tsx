@@ -28,8 +28,8 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-6 text-center">
         <div className="max-w-5xl mx-auto">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 text-white animate-fade-in">
-            <span className="text-purple-400 drop-shadow-[0_0_10px_rgba(168,85,247,0.8)] shadow-purple-500 animate-pulse">
-              Unlock Your AI Future with Kambaa's AI Ignite Masterclass
+            <span className="text-purple-400">
+              Unlock Your AI Future with <span className="drop-shadow-[0_0_10px_rgba(168,85,247,0.8)] shadow-purple-500 animate-pulse">Kambaa's AI Ignite</span> Masterclass
             </span>
           </h1>
           
