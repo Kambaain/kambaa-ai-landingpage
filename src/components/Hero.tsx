@@ -12,11 +12,13 @@ const Hero = () => {
   return (
     <>
       {/* Top promotional banner */}
-      <div className="bg-gradient-to-r from-red-600 to-red-500 text-white text-center py-3 shadow-lg shadow-red-500/50 relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-8 bg-red-500/20 animate-pulse rounded-full"></div>
+      <div className="flex justify-center py-3">
+        <div className="bg-gradient-to-r from-red-600 to-red-500 text-white text-center px-8 py-3 shadow-lg shadow-red-500/50 relative overflow-hidden rounded-full">
+          <div className="absolute inset-0 bg-red-500/20 animate-pulse rounded-full"></div>
         <p className="relative z-10 text-sm md:text-base font-semibold flex items-center justify-center gap-2">
           🎁 Worth ₹1999 - Absolutely FREE!
         </p>
+        </div>
       </div>
       
       <section 
