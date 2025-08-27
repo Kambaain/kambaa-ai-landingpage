@@ -51,7 +51,7 @@ const Hero = () => {
             size="lg"
             className="text-lg md:text-xl px-8 md:px-12 py-4 md:py-6 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white border-0 shadow-2xl shadow-blue-500/50 transition-all duration-300 transform hover:scale-105 animate-pulse"
           >
-            Claim Your Free 1-on-1 Consulting Session
+            Register Now
           </Button>
         </div>
       </div>
