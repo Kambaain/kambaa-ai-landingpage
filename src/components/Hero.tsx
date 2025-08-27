@@ -53,6 +53,10 @@ const Hero = () => {
           >
             Register Now
           </Button>
+          
+          <p className="text-sm text-gray-300 mt-3 flex items-center justify-center gap-1">
+            ⭐ Limited seats • Ends Sep 10, 2025
+          </p>
         </div>
       </div>
       
