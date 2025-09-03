@@ -85,7 +85,7 @@ const ContactForm = () => {
     if (!yearSemester) {
       toast({
         title: "Error",
-        description: "Year/Semester is required",
+        description: "Year is required",
         variant: "destructive"
       });
       return false;
@@ -251,25 +251,17 @@ const ContactForm = () => {
 
               <div>
                 <Label className="text-sm font-medium text-foreground">
-                  Year/Semester *
+                  Year *
                 </Label>
                 <Select value={formData.yearSemester} onValueChange={(value) => handleSelectChange('yearSemester', value)}>
                   <SelectTrigger className="mt-1 bg-background">
-                    <SelectValue placeholder="Select year/semester" />
+                    <SelectValue placeholder="Select year" />
                   </SelectTrigger>
                   <SelectContent className="bg-background border border-border z-50">
                     <SelectItem value="1st-year">1st Year</SelectItem>
                     <SelectItem value="2nd-year">2nd Year</SelectItem>
                     <SelectItem value="3rd-year">3rd Year</SelectItem>
                     <SelectItem value="4th-year">4th Year</SelectItem>
-                    <SelectItem value="1st-sem">1st Semester</SelectItem>
-                    <SelectItem value="2nd-sem">2nd Semester</SelectItem>
-                    <SelectItem value="3rd-sem">3rd Semester</SelectItem>
-                    <SelectItem value="4th-sem">4th Semester</SelectItem>
-                    <SelectItem value="5th-sem">5th Semester</SelectItem>
-                    <SelectItem value="6th-sem">6th Semester</SelectItem>
-                    <SelectItem value="7th-sem">7th Semester</SelectItem>
-                    <SelectItem value="8th-sem">8th Semester</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
