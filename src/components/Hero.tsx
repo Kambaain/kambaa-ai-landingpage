@@ -34,7 +34,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
       
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 text-center">
+      <div className="relative z-10 container mx-auto px-6 text-center mt-16">
         <div className="max-w-5xl mx-auto">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 text-white animate-fade-in">
             <span className="text-purple-400">
