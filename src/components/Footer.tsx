@@ -1,4 +1,4 @@
-import { Mail, Globe, Phone } from "lucide-react";
+import { Mail, Globe } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -16,7 +16,7 @@ const Footer = () => {
 
           <div className="grid lg:grid-cols-3 gap-12 mb-12 items-center">
             {/* Contact Information - Left Side */}
-            <div className="lg:col-span-1 grid md:grid-cols-3 lg:grid-cols-1 gap-8 lg:pl-8">
+            <div className="lg:col-span-1 grid md:grid-cols-2 lg:grid-cols-1 gap-8 lg:pl-8">
               <div className="text-center">
                 <div className="flex justify-center mb-3">
                   <div className="p-3 bg-gradient-to-r from-primary to-accent rounded-full shadow-lg shadow-primary/50">
@@ -25,10 +25,10 @@ const Footer = () => {
                 </div>
                 <h4 className="font-semibold text-foreground mb-2">Website</h4>
                 <a 
-                  href="#" 
+                  href="https://www.kambaa.ai" 
                   className="text-primary hover:text-accent transition-colors"
                 >
-                  www.kambaa.com
+                  www.kambaa.ai
                 </a>
               </div>
 
@@ -40,25 +40,10 @@ const Footer = () => {
                 </div>
                 <h4 className="font-semibold text-foreground mb-2">Contact</h4>
                 <a 
-                  href="mailto:sowmya@kambaa.in" 
+                  href="mailto:contact@kambaa.ai" 
                   className="text-primary hover:text-accent transition-colors"
                 >
-                  sowmya@kambaa.in
-                </a>
-              </div>
-
-              <div className="text-center">
-                <div className="flex justify-center mb-3">
-                  <div className="p-3 bg-gradient-to-r from-primary to-accent rounded-full shadow-lg shadow-primary/50">
-                    <Phone className="w-6 h-6 text-primary-foreground" />
-                  </div>
-                </div>
-                <h4 className="font-semibold text-foreground mb-2">Phone</h4>
-                <a 
-                  href="tel:+919342902895" 
-                  className="text-primary hover:text-accent transition-colors"
-                >
-                  +9193429 02895
+                  contact@kambaa.ai
                 </a>
               </div>
             </div>
