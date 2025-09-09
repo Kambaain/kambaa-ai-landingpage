@@ -16,7 +16,7 @@ const Hero = () => {
     >
       {/* Promotional banner inside hero */}
       <div className="absolute top-8 left-1/2 transform -translate-x-1/2 z-30">
-        <div className="bg-gradient-to-r from-red-600 to-red-500 text-white text-center px-8 py-3 shadow-lg shadow-red-500/50 relative overflow-hidden rounded-full">
+        <div className="bg-gradient-to-r from-red-600 to-red-500 text-white text-center px-8 py-3 shadow-lg shadow-red-500/50 relative overflow-hidden rounded-xl">
           <div className="absolute inset-0 bg-red-500/20 animate-pulse rounded-full"></div>
           <p className="relative z-10 text-sm md:text-base font-semibold flex items-center justify-center gap-2">
             🎁 Worth ₹1999 - Absolutely FREE!
