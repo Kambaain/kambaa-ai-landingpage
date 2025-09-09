@@ -43,7 +43,7 @@ const Hero = () => {
           </h1>
           
           <p className="text-xl md:text-2xl lg:text-3xl text-gray-200 mb-12 leading-relaxed animate-fade-in">
-            A 4 Hour Journey to Ignite Your AI Potential – Worth ₹1999, but absolutely Free! Hurry up limited seats
+            A 4 Hour Journey to Ignite Your AI Potential – Worth ₹5000, but absolutely Free! Hurry up limited seats
           </p>
           
           <Button 
