@@ -96,8 +96,10 @@ const SiteFooter = () => {
             <ul className="flex flex-col gap-2 list-none p-0 m-0">
               <li>
                 <a 
-                  href="/privacy-policy"
+                  href="https://drive.google.com/file/d/1oLxH0_yCreYzfs9_vmhczb3NMEWzlK9m/view?usp=sharing"
                   className="text-sm text-muted-foreground hover:text-primary hover:underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-secondary transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Privacy Policy
                 </a>
@@ -125,8 +127,10 @@ const SiteFooter = () => {
           
           <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
             <a 
-              href="/privacy-policy"
+              href="https://drive.google.com/file/d/1oLxH0_yCreYzfs9_vmhczb3NMEWzlK9m/view?usp=sharing"
               className="text-sm text-muted-foreground hover:text-primary hover:underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-secondary transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Privacy Policy
             </a>
