@@ -220,11 +220,11 @@ const ContactForm = () => {
 
               <div>
                 <Label className="text-sm font-medium text-foreground">
-                  Course *
+                  Department *
                 </Label>
                 <Select value={formData.course} onValueChange={value => handleSelectChange('course', value)}>
                   <SelectTrigger className="mt-1 bg-background">
-                    <SelectValue placeholder="Select your course" />
+                    <SelectValue placeholder="Select your Department" />
                   </SelectTrigger>
                   <SelectContent className="bg-background border border-border z-50">
                     <SelectItem value="Computer Science Engineering">Computer Science Engineering</SelectItem>
