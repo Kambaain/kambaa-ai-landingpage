@@ -17,11 +17,16 @@ const SiteFooter = () => {
           
           {/* Brand Column */}
           <div className="md:col-span-2 lg:col-span-1">
-            <div className="w-40 mb-4">
+            <div className="mb-4">
               <h3 className="text-lg font-bold text-foreground mb-2">Kambaa AI</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
+              <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                 AI-First Solutions for Tomorrow's Enterprises
               </p>
+              <img 
+                src="/lovable-uploads/b18b4b03-0879-43dc-9052-0f7d7e1b568d.png" 
+                alt="Kambaa AI-First Implementation Partner" 
+                className="w-64 h-32 object-cover object-center rounded-lg"
+              />
             </div>
           </div>
 
