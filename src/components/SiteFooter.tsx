@@ -110,14 +110,6 @@ const SiteFooter = () => {
                   Terms of Service
                 </a>
               </li>
-              <li>
-                <a 
-                  href="/accessibility"
-                  className="text-sm text-muted-foreground hover:text-primary hover:underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-secondary transition-colors"
-                >
-                  Accessibility
-                </a>
-              </li>
             </ul>
           </div>
         </div>
