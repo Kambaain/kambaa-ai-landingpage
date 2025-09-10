@@ -106,8 +106,10 @@ const SiteFooter = () => {
               </li>
               <li>
                 <a 
-                  href="/terms-of-service"
+                  href="https://drive.google.com/file/d/1xW-AiBIQxfn8LoZan66fCriKtcdE3Rba/view?usp=sharing"
                   className="text-sm text-muted-foreground hover:text-primary hover:underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-secondary transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Terms of Service
                 </a>
@@ -135,8 +137,10 @@ const SiteFooter = () => {
               Privacy Policy
             </a>
             <a 
-              href="/terms-of-service"
+              href="https://drive.google.com/file/d/1xW-AiBIQxfn8LoZan66fCriKtcdE3Rba/view?usp=sharing"
               className="text-sm text-muted-foreground hover:text-primary hover:underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-secondary transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Terms of Service
             </a>
