@@ -12,7 +12,7 @@ const AIConsultation = () => {
     description: "AI Industry Professionals"
   }, {
     icon: Gift,
-    title: "Completely Free",
+    title: "Hands-On Experience",
     description: "Worth ₹1999"
   }];
   return <section className="py-24 relative overflow-hidden">
