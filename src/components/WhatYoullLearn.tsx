@@ -60,7 +60,7 @@ const WhatYoullLearn = () => {
             <div className="bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20 rounded-xl p-8">
               <p className="text-lg md:text-xl text-foreground leading-relaxed font-medium">
                 Walk in with little or no AI knowledge, walk out transformed armed with skills to build agents, 
-                workflows, and products. In just 3-4 hours, you'll shift from novice to a confident creator, 
+                workflows, and products. In just 4 hours, you'll shift from novice to a confident creator, 
                 ready to shape your future!
               </p>
             </div>
