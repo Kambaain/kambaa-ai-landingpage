@@ -19,14 +19,14 @@ const AIConsultation = () => {
     title: "All Departments",
     description: "Coding knowledge is not required"
   }];
-  return <section className="py-24 relative overflow-hidden">
+  return <section className="py-16 relative overflow-hidden">
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
       backgroundImage: `url(${classroomBg})`
     }} />
       <div className="absolute inset-0 bg-background/95" />
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16 animate-fade-in">
+          <div className="text-center mb-12 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground">What is the AI Ignite Workshop?</h2>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-4xl mx-auto">
               <span className="font-semibold">This free masterclass, brought to you by Kambaa AI, is designed for students of all departments including Mechanical and Civil departments, who are new to AI. Whether you've never heard of artificial intelligence or only know the basics, this 4 hour session will open your eyes to a world of opportunity. Conducted by industry experts, it's your first step toward becoming an AI innovator, no experience required!</span>
