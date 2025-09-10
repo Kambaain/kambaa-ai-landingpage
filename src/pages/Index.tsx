@@ -2,16 +2,16 @@ import Hero from "@/components/Hero";
 import AIConsultation from "@/components/AIConsultation";
 import WhatYoullLearn from "@/components/WhatYoullLearn";
 import ContactForm from "@/components/ContactForm";
-import Footer from "@/components/Footer";
+import SiteFooter from "@/components/SiteFooter";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div>
       <Hero />
       <AIConsultation />
       <WhatYoullLearn />
       <ContactForm />
-      <Footer />
+      <SiteFooter />
     </div>
   );
 };
