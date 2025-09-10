@@ -71,8 +71,10 @@ const SiteFooter = () => {
             <ul className="flex flex-col gap-2 list-none p-0 m-0">
               <li>
                 <a 
-                  href="#about"
+                  href="https://kambaa.ai/about/about-us-ai-experts-for-businesses/"
                   className="text-sm text-muted-foreground hover:text-primary hover:underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-secondary transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   About
                 </a>
