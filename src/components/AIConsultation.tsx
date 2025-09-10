@@ -25,9 +25,6 @@ const AIConsultation = () => {
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground">What is the AI Ignite Workshop?</h2>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-4xl mx-auto">
-              This free masterclass, brought to you by <span className="text-blue-600 font-semibold">This free masterclass, brought to you by Kambaa AI, is designed for students of all departments including Mechanical and Civil departments, who are new to AI. Whether you've never heard of artificial intelligence or only know the basics, this 4 hour session will open your eyes to a world of opportunity. Conducted by industry experts, it's your first step toward becoming an AI innovator, no experience required!</span>, is designed for students like you who are new to AI. 
-              Whether you've never heard of artificial intelligence or only know the basics, this 4 hour session will open your 
-              eyes to a world of opportunity. Hosted by industry experts, it's your first step toward becoming an AI innovator, 
               <span className="font-semibold">This free masterclass, brought to you by Kambaa AI, is designed for students of all departments including Mechanical and Civil departments, who are new to AI. Whether you've never heard of artificial intelligence or only know the basics, this 4 hour session will open your eyes to a world of opportunity. Hosted by industry experts, it's your first step toward becoming an AI innovator, no experience required!</span>
             </p>
           </div>
