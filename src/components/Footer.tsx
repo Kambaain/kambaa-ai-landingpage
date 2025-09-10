@@ -1,4 +1,4 @@
-import { Mail, Globe } from "lucide-react";
+import { Mail, Globe, MapPin } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -16,7 +16,21 @@ const Footer = () => {
 
           <div className="grid lg:grid-cols-3 gap-12 mb-12 items-center">
             {/* Contact Information - Left Side */}
-            <div className="lg:col-span-1 grid md:grid-cols-2 lg:grid-cols-1 gap-8 lg:pl-8">
+            <div className="lg:col-span-1 grid md:grid-cols-3 lg:grid-cols-1 gap-8 lg:pl-8">
+              <div className="text-center">
+                <div className="flex justify-center mb-3">
+                  <div className="p-3 bg-gradient-to-r from-primary to-accent rounded-full shadow-lg shadow-primary/50">
+                    <MapPin className="w-6 h-6 text-primary-foreground" />
+                  </div>
+                </div>
+                <h4 className="font-semibold text-foreground mb-2">Address</h4>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  10th Floor, North Wing, Pricol<br />
+                  Caledon Square, Avinashi Road,<br />
+                  Coimbatore.
+                </p>
+              </div>
+
               <div className="text-center">
                 <div className="flex justify-center mb-3">
                   <div className="p-3 bg-gradient-to-r from-primary to-accent rounded-full shadow-lg shadow-primary/50">
