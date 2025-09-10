@@ -8,7 +8,7 @@ const AIConsultation = () => {
     description: "Comprehensive session"
   }, {
     icon: Users,
-    title: "Expert Led",
+    title: "Hands-On Experience",
     description: "AI Industry Professionals"
   }, {
     icon: Gift,
