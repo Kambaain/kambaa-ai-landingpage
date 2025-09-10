@@ -8,8 +8,8 @@ const AIConsultation = () => {
     description: "Comprehensive session"
   }, {
     icon: Users,
-    title: "Hands-On Experience",
-    description: "learn 20+ AI tools"
+    title: "Expert Led",
+    description: "AI Industry Professionals"
   }, {
     icon: Gift,
     title: "Completely Free",
