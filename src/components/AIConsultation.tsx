@@ -1,4 +1,4 @@
-import { Clock, Users, Gift, Building } from "lucide-react";
+import { Clock, Users, Gift } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import classroomBg from "@/assets/classroom-background.jpg";
 const AIConsultation = () => {
@@ -14,10 +14,6 @@ const AIConsultation = () => {
     icon: Gift,
     title: "Hands-On Experience",
     description: "Learn 20+ AI tools"
-  }, {
-    icon: Building,
-    title: "All Departments",
-    description: "Coding knowledge is not required."
   }];
   return <section className="py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
@@ -32,11 +28,11 @@ const AIConsultation = () => {
               This free masterclass, brought to you by <span className="text-blue-600 font-semibold">Kambaa AI</span>, is designed for students like you who are new to AI. 
               Whether you've never heard of artificial intelligence or only know the basics, this 4 hour session will open your 
               eyes to a world of opportunity. Hosted by industry experts, it's your first step toward becoming an AI innovator, 
-              <span className="font-semibold"> no experience required!</span>
+              <span className="font-semibold">This free masterclass, brought to you by Kambaa AI, is designed for students of all departments including Mechanical and Civil departments, who are new to AI. Whether you've never heard of artificial intelligence or only know the basics, this 4 hour session will open your eyes to a world of opportunity. Hosted by industry experts, it's your first step toward becoming an AI innovator, no experience required!</span>
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {features.map((feature, index) => <Card key={index} className="bg-background border-border hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 group animate-fade-in" style={{
             animationDelay: `${index * 200}ms`
           }}>
